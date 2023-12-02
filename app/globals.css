@@ -16,12 +16,99 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+body{
+  background: var(--Background, radial-gradient(72.18% 85.59% at 15.2% 6.17%, #111010 19.27%, #2C3243 63.54%, #090808 100%));
+}
+
+
+.gradient-border-mask {
+  position: relative;
+}
+
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px; 
+  border: 2px solid transparent;
+  background: radial-gradient(441.94% 39.58% at 73.94% 50.11%, rgb(255, 255, 255) 0%, rgba(176, 176, 176, 0.52) 100%), linear-gradient(142deg, rgba(0, 0, 0, 0.76) 30.64%, rgba(255, 255, 255, 0.00) 130.54%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.bordergrad{
+  position: relative;
+}
+
+
+.bordergrad{
+  position: relative;
+}
+.bordergrad::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px; 
+  border: 2px solid transparent;
+  background: radial-gradient(441.94% 39.58% at 73.94% 50.11%, rgb(0, 191, 255) 0%, rgba(61,73,147, 10)), linear-gradient(142deg, rgba(0, 0, 0, 0.76) 30.64%, rgba(255, 255, 255, 0.00) 130.54%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#ffffffe9 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+
+.style {
+  border-radius: 24.913px;
+  
+  background: url("./assets/bg1.png");
+  background-blend-mode: color-burn, multiply;
+  backdrop-filter: blur(23.805566787719727px);
+  background-size: cover;
+}
+
+.minibg{
+  border-radius: 25px;
+  background: radial-gradient(441.94% 39.58% at 73.94% 50.11%, rgba(255, 255, 255, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(142deg, rgba(0, 0, 0, 0.76) 30.64%, rgba(255, 255, 255, 0.00) 130.54%);
+  background-blend-mode: overlay, multiply;
+  box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.50) inset;}
+
+  .org{
+    border-radius: 24.913px;
+border-radius: 24.913px;
+backdrop-filter: blur(23.805566787719727px);
+
+background: rgba(96, 96, 96, 0.20);
+box-shadow: 0px 19.04445px 28.56668px 0px #1f1f1f4a, 0px 4.76111px 19.04445px 0px rgba(255, 255, 255, 0.25) inset, 19.04445px 9.52223px 47.61113px 0px rgba(0, 0, 0, 0.28) inset, 16.60834px 16.60834px 41.52084px 0px #000;
+  }
+
+  .shadowbox{
+    box-shadow: 6px 8px 2px 0px rgba(0, 0, 0, 0.485) inset, -3px -5px 2px 0px rgba(255, 255, 255, 0.161) inset;
+ border-radius: 25px;
+ background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), #404040;
+ color: rgba(255, 255, 255, 0.50);
+
+}
+
+.text{
+  background: linear-gradient(270deg, #67B4AA 2.37%, #8692FF 59.03%, #F8E048 104.13%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.btnbg{
+  background: linear-gradient(142deg, rgba(0, 0, 0, 0.76) 30.64%, rgba(255, 255, 255, 0.00) 130.54%), rgba(64, 64, 64, 0.50);
+  border-radius: 25px;
+
 }
